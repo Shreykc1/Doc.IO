@@ -22,6 +22,7 @@ declare type SearchParamProps = {
   };
 
   declare type User = {
+    0?: any;
     id: string;
     name: string;
     email: string;
