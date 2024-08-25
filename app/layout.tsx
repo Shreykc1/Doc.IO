@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { ClerkProvider } from "@clerk/nextjs"
 import { dark } from "@clerk/themes"
 import Provider from "./Provider"
+import { ThemeProvider } from "@/components/ThemeProvider"
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -34,9 +35,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         fontSans.variable
                     )}
                 >
-                    <Provider>
-                        {children}
-                    </Provider>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="light"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <Provider>
+                            {children}
+                        </Provider>
+                    </ThemeProvider>
                 </body>
             </html>
         </ClerkProvider>

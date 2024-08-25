@@ -123,7 +123,7 @@ export default function ToolbarPlugin() {
   }
 
   return (
-    <div className="toolbar" ref={toolbarRef}>
+    <div className="toolbar !bg-dark-300" ref={toolbarRef}>
       <button
         disabled={!canUndo}
         onClick={() => {

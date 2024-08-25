@@ -10,8 +10,8 @@ const Header = ({children, className}: HeaderProps) => {
         <Link href='/' className='md:flex-1'>
             <Image
             src='/assets/icons/logo.svg'
-            alt='LexicalAutoFocusPluginogo with name'
-            width={120}
+            alt='Logo with name'
+            width={200}
             height={32}
             className='hidden md:block'
             />

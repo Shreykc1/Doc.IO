@@ -4,6 +4,7 @@ import { Notifications } from '@/components/Notifications'
 
 import AddDocBtn from '@/components/ui/AddDocBtn'
 import { Button } from '@/components/ui/button'
+import { ThemeButton } from '@/components/ui/ThemeButton'
 import { listDocuments } from '@/lib/actions/room.actions'
 import { dateConverter } from '@/lib/utils'
 import { SignedIn, UserButton } from '@clerk/nextjs'
@@ -22,6 +23,7 @@ const Home = async () => {
         <main className='home-container'>
             <Header className='sticky left-0 top-0'>
                 <div className='flex items-center gap-2 lg:gap-4'>
+                    <ThemeButton />
                     <Notifications />
                     <SignedIn>
                         <UserButton />
@@ -42,7 +44,7 @@ const Home = async () => {
                         {roomDocs.data.map(({ id, metadata, createdAt }: any) => (
                             <li key={id} className='document-list-item'>
                                 <Link href={`/documents/${id}`} className='flex flex-1 items-center gap-4'>
-                                    <div className='hidden rouded-md bg-dark-500 p-2 sm:block'>
+                                    <div className='hidden rouded-md p-2 sm:block'>
                                         <Image
                                             src="/assets/icons/doc.svg"
                                             alt="file"

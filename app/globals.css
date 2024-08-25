@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@liveblocks/react-ui/styles.css"; 
+@import "@liveblocks/react-ui/styles.css";
 @import "@liveblocks/react-lexical/styles.css";
 @import "../styles/dark-theme.css";
 
 /* ========================================== TAILWIND STYLES */
 @layer base {
   :root {
-    background: #09111f;
+    background: #09090A;
     color: #fff;
     margin: 0;
   }
@@ -43,7 +43,7 @@
   }
 
   .gradient-blue {
-    @apply bg-gradient-to-t from-blue-500 to-blue-400;
+    @apply bg-blue-500;
   }
   .gradient-red {
     @apply bg-gradient-to-t from-red-500 to-red-400;
@@ -102,7 +102,7 @@
   }
 
   .document-list-item {
-    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
+    @apply flex items-center justify-between gap-4 rounded-lg bg-dark-500 p-5 shadow-xl;
   }
 
   .document-list-empty {
@@ -138,11 +138,11 @@
   }
 
   .comment-composer {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
+    @apply w-full max-w-[800px] border border-dark-400 bg-dark-300 shadow-sm lg:w-[350px];
   }
 
   .comment-thread {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px] transition-all;
+    @apply w-full max-w-[800px] border border-dark-400 bg-dark-300 shadow-sm lg:w-[350px] transition-all;
   }
 
   .loader {
@@ -205,25 +205,29 @@
 
 /* ======================== Liveblocks Override */
 .lb-root {
-  --lb-accent-subtle: #0b1527;
-  --lb-radius: 0px;
+  --lb-accent-subtle: #fff;
+  --lb-radius: 10px;
   --lb-dynamic-background: #1b2840;
 }
 
 .lb-comment,
 .lb-thread-comments,
-.lb-composer,
-.lb-comment-reaction {
-  background-color: #0f1c34;
+.lb-composer{
+  background-color: #101012;
   color: #fff;
 }
+.lb-comment-reaction {
+    background-color: #0f1c34;
+    color: #fff;
+  }
+
 
 .lb-button {
   --lb-foreground-moderate: #fff;
 }
 
 .lb-button:where([data-variant="primary"]) {
-  background-color: #161e30;
+  background-color: #101012;
   color: #b4c6ee;
   padding: 8px;
 }
@@ -268,7 +272,7 @@
 }
 
 .lb-comment-content {
-  background: #0b1527;
+  background: #1F1F22;
   margin-top: 16px;
   padding: 12px;
   border-radius: 4px;
@@ -288,7 +292,7 @@
 }
 
 .lb-root:where(:not(.lb-root .lb-root)) {
-  --lb-dynamic-background: #1b2840;
+  --lb-dynamic-background: #1F1F22 !important;
   color: #fff;
 }
 
