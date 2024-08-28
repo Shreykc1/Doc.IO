@@ -3,8 +3,6 @@ import Header from '@/components/Header'
 import { Notifications } from '@/components/Notifications'
 
 import AddDocBtn from '@/components/ui/AddDocBtn'
-import { Button } from '@/components/ui/button'
-import { ThemeButton } from '@/components/ui/ThemeButton'
 import { listDocuments } from '@/lib/actions/room.actions'
 import { dateConverter } from '@/lib/utils'
 import { SignedIn, UserButton } from '@clerk/nextjs'
@@ -23,7 +21,6 @@ const Home = async () => {
         <main className='home-container'>
             <Header className='sticky left-0 top-0'>
                 <div className='flex items-center gap-2 lg:gap-4'>
-                    <ThemeButton />
                     <Notifications />
                     <SignedIn>
                         <UserButton />
@@ -58,7 +55,7 @@ const Home = async () => {
                                         </p>
                                     </div>
                                 </Link>
-                                <DeleteModal roomId={id}/>
+                                <DeleteModal roomId={id} />
                             </li>
                         ))}
                     </ul>
