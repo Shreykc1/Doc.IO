@@ -205,7 +205,7 @@
 
 /* ======================== Liveblocks Override */
 .lb-root {
-  --lb-accent-subtle: #fff;
+  --lb-accent-subtle: #1b2840;
   --lb-radius: 10px;
   --lb-dynamic-background: #1b2840;
 }
@@ -265,6 +265,7 @@
 .lb-dropdown-item-icon,
 .lb-composer-editor {
   color: #fff;
+  background-color: 1F1F22;
 }
 
 .lb-composer-action {
